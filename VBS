@@ -1,0 +1,37 @@
+## BEGIN 
+#修改列，保留列标头指定内容的列，删除其他列。
+
+Sub KeepColumnsByHeader()
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+    Dim keepHeaders As Variant
+    
+    keepHeaders = Array("No.", "*机柜位置Rack", "*柜内位置U Bit", "*设备型号Device Model/ODF", "SN")
+    
+    Dim colIndex As Integer
+    
+    Dim found As Boolean
+    
+    Application.ScreenUpdating = False
+    
+    For colIndex = ws.UsedRange.Columns.Count To 1 Step -1
+        found = False
+        For Each Header In keepHeaders
+            If ws.Cells(1, colIndex).Value = Header Then
+                found = True
+                Exit For
+                
+            End If
+        Next Header
+        
+        If Not found Then
+            ws.Columns(colIndex).Delete
+        End If
+
+    Next colIndex
+
+    Application.ScreenUpdating = True
+
+End Sub
+
+## END 
