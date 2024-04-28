@@ -35,3 +35,120 @@ Sub KeepColumnsByHeader()
 End Sub
 
 ## END 
+
+## BEGIN
+
+Sub AddColumnsWithLimitedRows()
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+    Dim lastCol As Long
+    Dim lastRow As Long
+    Dim i As Integer
+
+    Application.ScreenUpdating = False ' 关闭屏幕更新以加快宏的执行速度
+
+    ' 找到最后一列和最后一行
+    lastCol = ws.Cells(1, ws.Columns.Count).End(xlToLeft).Column
+    lastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
+
+    ' 在最后一列后添加三列
+    ws.Columns(lastCol + 1).Resize(, 3).Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+
+    ' 填充新添加的三列，但限制在最后一行的范围内
+    For i = 1 To 3
+        ws.Range(ws.Cells(2, lastCol + i), ws.Cells(lastRow, lastCol + i)).Value = Choose(i, "/", "A", "B")
+    Next i
+
+    Application.ScreenUpdating = True ' 执行完毕后重新打开屏幕更新
+End Sub
+
+## END
+
+
+## BEGIN
+Sub AddConcatenatedColumns()
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+    Dim lastCol As Long
+    Dim lastRow As Long
+    Dim i As Long
+    Dim j As Long
+    Dim concatenatedData As String
+
+    Application.ScreenUpdating = False ' 关闭屏幕更新以加快宏的执行速度
+
+    ' 找到最后一列和最后一行
+    lastCol = ws.Cells(1, ws.Columns.Count).End(xlToLeft).Column
+    lastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
+
+    ' 在最后一列后添加两列
+    ws.Columns(lastCol + 1).Resize(, 2).Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+
+    ' 遍历每一行，构建并填充第一列的数据
+    For i = 2 To lastRow
+        concatenatedData = ""
+        ' 遍历每一列，构建字符串
+        For j = 1 To lastCol
+            If ws.Cells(1, j).Value <> "/" And ws.Cells(1, j).Value <> "A" And ws.Cells(1, j).Value <> "B" Then
+                If concatenatedData = "" Then
+                    concatenatedData = ws.Cells(i, j).Value
+                Else
+                    concatenatedData = concatenatedData & " / " & ws.Cells(i, j).Value
+                End If
+            End If
+        Next j
+        ' 添加"A"列的数据
+        concatenatedData = concatenatedData & " / A"
+        ' 填充第一列
+        ws.Cells(i, lastCol + 1).Value = concatenatedData
+    Next i
+
+    ' 遍历每一行，构建并填充第二列的数据
+    For i = 2 To lastRow
+        concatenatedData = ""
+        ' 遍历每一列，构建字符串
+        For j = 1 To lastCol
+            If ws.Cells(1, j).Value <> "/" And ws.Cells(1, j).Value <> "A" And ws.Cells(1, j).Value <> "B" Then
+                If concatenatedData = "" Then
+                    concatenatedData = ws.Cells(i, j).Value
+                Else
+                    concatenatedData = concatenatedData & " / " & ws.Cells(i, j).Value
+                End If
+            End If
+        Next j
+        ' 添加"B"列的数据
+        concatenatedData = concatenatedData & " / B"
+        ' 填充第二列
+        ws.Cells(i, lastCol + 2).Value = concatenatedData
+    Next i
+
+    Application.ScreenUpdating = True ' 执行完毕后重新打开屏幕更新
+End Sub
+
+## END
+
+## BEGIN  最后列后面添加三列 / , A , B
+Sub AddColumnsAndFillData()
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+    Dim lastCol As Long
+    Dim totalRows As Long
+    Dim i As Integer
+
+    Application.ScreenUpdating = False ' 关闭屏幕更新以加快宏的执行速度
+
+    ' 确定总行数和最后一列
+    totalRows = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
+    lastCol = ws.Cells(1, ws.Columns.Count).End(xlToLeft).Column
+
+    ' 在最后一列后添加三列
+    ws.Columns(lastCol + 1).Resize(, 3).Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+
+    ' 填充新添加的三列
+    For i = 1 To 3
+        ws.Range(ws.Cells(1, lastCol + i), ws.Cells(totalRows, lastCol + i)).Value = Choose(i, "/", "A", "B")
+    Next i
+
+    Application.ScreenUpdating = True ' 执行完毕后重新打开屏幕更新
+End Sub
+## END
