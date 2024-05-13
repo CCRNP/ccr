@@ -21,3 +21,6 @@
 
 5-10
 华南-广州(AZ3)-DBS扩容-存储-PD20240320020-1-multiaz_plog-12台-SSC LLD-v1.1
+
+5-13
+华南-广州(AZ3)-华南-广州(AZ5)-华南-广州(AZ6)-DBS扩容-存储-PD20240320020-multiaz_plog-12台-SSC
