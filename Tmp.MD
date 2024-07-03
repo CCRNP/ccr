@@ -1,5 +1,20 @@
 ## THIS IS TEMP FILE.
 
+- 7/3  
+大学城  
+单号：HIQA240701uxHQ	  
+广州ENS（信息枢纽楼）+ 华南-广州(AZ1)-广域网-基于NP的flowscope平台全球部署-华南  
+
+华新园  
+单号：HIQA240628s8l0  
+西南-贵阳-数据中心运营部实验室-HWCCloudBuilder(AZ1)-其他资源扩容--PD20240605015-华新园POP点接入-SC_CAN_4-DCO工程服务需求-IH6Q  
+
+HIQA2407014n0w  
+华南-广州(AZ1)-广域网-基于NP的flowscope平台全球部署-华南-SC_CAN_4-DCO工程服务需求-4U46  
+
+HIQA240702m07n
+华南-广州(AZ1)-广域网-HBN-B网扩容建设（华南）-SC_CAN_4-DCO工程服务需求-1G1X  
+
 - 6/3 
 华南-广州(AZ3)-网关区交付-新建集群-cluster10-PD20240418015-elb_cvs-4台-SSC【紧急需求】  
   
