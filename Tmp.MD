@@ -1,21 +1,50 @@
-## TEMP FILE.
-4-11
-云埔：  
-  华南-广州(AZ5)-BMS扩容-OP202503052992-1-physical.d6.6xlarge.3h-8台BV620.4-依赖减容-DSSC  
-华新园：
-  华南-广州(AZ1)-广域网-广州皓宽IXP线路新建带保护线路撤销裸光纤  
-  华南-广州(AZ1)-广域网-华新园新建DCE  
+## TEMP FILE.  
 
-华南-广州(AZ1)-广域网-华南广州公有云新增扩容对接福建广电运营商30G线路  
-HIQA2504157g0p  
+MPO：68 PCS
+	15M 6 PCS
+	20M 30 PCS
+	30M 16 PCS
+	40M 16 PCS
 
-华南-广州(AZ1)-广域网-华新园和大学城珠江数码扩容至100G  
-HIQA250415x27a  
+5米多模DLC: 2 PCS
 
-华南-广州(AZ3)-ECS扩容-OP202412263516-1-s7-12台-DSSC  HIQA2504118p8e
+RJ45：4 PCS 40M 
 
+SM-DLC: 16 PCS
+	8 PCS 5M
+	8 PCS 30M
+
+SM-LC: 16 PCS 30M
+
+ODF: 368 PCS
+	A-ODF - 1
+		LC-FC 30M 92 PCS
+	B-ODF - 1
+		DLC 20M 6 PCS
+		DLC 30M 2 PCS
+		DLC 15M 84 PCS  
+
+	A-ODF - 2
+		LC-FC 40M 92 PCS  
+	
+	B-ODF -2
+		DLC 20M 16 PCS  
+		DLC 30M 2 PCS	 
+		DLC 15M 74 PCS  
+ 
 
 ## DEMO  
+
+2025/4/28  
+站点：化龙  
+DCO：王干  
+督导：陈崇荣  
+硬件：唐生志，唐超峰，黄文钦，余桐安，余青海，周帅  
+需求单号：HIQA250427f62h  
+项目名称：华南-广州(AZ2)-架构改造-2.0NC改造项目-RS202502144K4S        
+项目内容：2台12808，2台分光器，658根线。  
+今日完成：设备辅料拆箱，导轨安装并上架，板卡安装，线缆标签粘贴。  
+项目进度：20%   
 
 2025/4/23  
 站点：名美  
