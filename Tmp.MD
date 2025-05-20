@@ -18,43 +18,6 @@
 	工作量：2台12808，2台分光器、658根线
 	5月7号完成硬装
 
-
-MPO：68 PCS
-
-	15M 6 PCS
-	20M 30 PCS
-	30M 16 PCS
-	40M 16 PCS
-
-5米多模DLC: 2 PCS
-
-RJ45：4 PCS 40M 
-
-SM-DLC: 16 PCS
-
-	8 PCS 5M
-	8 PCS 30M
-
-SM-LC: 16 PCS 30M
-
-ODF: 368 PCS
-
-	A-ODF - 1
-		LC-FC 30M 92 PCS
-	B-ODF - 1
-		DLC 20M 6 PCS
-		DLC 30M 2 PCS
-		DLC 15M 84 PCS  
-
-	A-ODF - 2
-		LC-FC 40M 92 PCS  
-	
-	B-ODF -2
-		DLC 20M 16 PCS  
-		DLC 30M 2 PCS	 
-		DLC 15M 74 PCS  
- 
-
 ## DEMO  
 
 2025/5/20  
