@@ -1,15 +1,5 @@
 ## TEMP FILE.  
 
-华南-广州(AZ3)-ECS减容-OPO20250925Z813-名美超电下架26台V5服务器-非整柜-SSC  
-华南-广州(AZ3)-BMS扩容-RS20250919U5G6-physical.hc2.xlarge.wz-30台-SSC【微众】  
-
-
-HIQA251027kdxx  
-华南-广州(AZ1)-物理网络减容-OPO202509124N7W-加速器下架25台交换机-非整柜  
-
-can66a-1e-01-02-4U/CE12808/Sip9/0/0  
-
-can66a-1e-01-03-4U/CE12808/Sip10/0/1  
 
 ## DEMO  
 
